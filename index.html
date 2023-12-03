@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>工具页面导航</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+      }
+
+      #background {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url(https://t.mwm.moe/ycy);
+         background-attachment: fixed;
+         background-repeat: no-repeat;
+         background-size: cover;
+         -moz-background-size: cover;
+         z-index: -1;
+      }
+
+      #overlay { 
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: rgba(255, 255, 255, 0.5);
+         backdrop-filter: blur(5px);
+         border-radius: 20px;
+         padding: 20px;
+         text-align: center;
+         font-family: Arial, sans-serif;
+         color: #000;
+         width: 500px; /* 调整遮罩宽度 */
+         height: 83%; /* 调整遮罩高度 */
+      }
+   </style>
+</head>
+<body>
+   <div id="background"></div>
+
+   <div id="overlay">
+      <h1>工具列表</h1>
+      <p style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/q">QQ消息撤回名片生成</a></p>
+      <p style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/b">仿浏览器页面</a></p>
+      <p style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/h">滑稽</a></p>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/v">浏览器主页</a></P>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/i">火狐插件收藏集</a></P>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/y">软件分享</a></P>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/yc">软件分享(备用)</a></P>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.github.io/t/x">大学习账号</a></P>
+      <br/>
+      <P style="font-family:arial;color:black;font-size:20px;"><a href="https://licyk.netlify.app">返回博客</a></P>
+   </div>
+</body>
+</html>

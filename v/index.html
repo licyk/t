@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#FFF">
+<title id="title">主页</title>
+<link rel="icon" type="image/png" href="https://xiaobaizzz.gitee.io/liulanqizhuye/images/logo.png">
+<link rel="stylesheet" href="./css/main.css">
+		<script type="text/javascript">
+			var d = new Date()
+			var time = d.getHours()
+			if(time < 24) {
+				document.getElementById("title").innerHTML = "主页-晚上好！";
+			}
+			if(time < 19) {
+				document.getElementById("title").innerHTML = "主页-下午好！";
+			}
+			if(time < 14) {
+				document.getElementById("title").innerHTML = "主页-中午好！";
+			}
+			if(time < 12) {
+				document.getElementById("title").innerHTML = "主页-上午好！";
+			}
+			if(time < 9) {
+				document.getElementById("title").innerHTML = "主页-早上好！";
+			}
+			if(time < 6) {
+				document.getElementById("title").innerHTML = "主页-睡觉啦！";
+			}
+		</script>
+</head>
+<body>
+<div id="main"><div id="logo"></div>
+<div id="edit">
+</div>
+<ul id="book"></ul></div>
+<div class="box" id="search">
+	<ul class="suggestion"></ul>
+	<div id="search-row">
+		<div class="div-input">
+			<input class="input" placeholder="搜索或输入网址"><div class="back"></div><div class="close">取消</div>
+		</div>
+		<div class="shortcut">
+			<ul class="shortcut1"><li>www.</li><li>m.</li><li>wap.</li><li>.org</li></ul>
+			<ul class="shortcut2"><li>.</li><li>/</li><li>.cn</li><li>.com</li><li>.org</li></ul>
+			<ul class="shortcut3"><li><a>快速搜索:</a></li><li></li><li></li><li></li><li></li><li></li></ul>
+		</div>
+	</div>
+</div>
+<div class="addbook-shade">
+    <div class="addbook-from">
+        <div class="addbook-title">添加书签</div>
+        <div class="addbook-content">
+            <input type="text" class="addbook-input" placeholder="标题">
+            <input type="text" class="addbook-input" placeholder="地址">
+            <div id="addbook-upload"></div>
+            <input type="file" id="addbook-pick">
+        </div>
+        <div class="addbook-btn"><a class="addbook-btn1">取消</a><a class="addbook-btn0">确定</a></div>
+    </div>
+</div>
+<div class="set-from">
+    <div class="set-back"></div>
+    <p class="set-logo">设置</p>
+    <ul class="set-option-from">
+        <li class="set-option">
+            <p class="set-title">搜索引擎</p>
+            <select class="set-select"><option value="via">跟随VIA</option><option value="baidu">百度</option><option value="google">谷歌</option><option value="bing">必应</option><option value="sm">神马</option><option value="haosou">好搜</option><option value="sogou">搜狗</option></select>
+            <p class="set-description">非VIA浏览器请设置搜索引擎</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">过渡动画</p>
+            <div class="set-switch"></div>
+            <p class="set-description">开闭返回不重载请关闭</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">壁纸</p>
+            <div class="set-upload"></div>
+            <p class="set-description">图片过大会影响加载速度</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">LOGO</p>
+            <div class="set-upload"></div>
+            <p class="set-description">图片过大会影响加载速度</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">标签颜色</p>
+            <select class="set-select"><option value="black">黑色</option><option value="white">白色</option></select>
+            <p class="set-description">主页书签文字颜色</p>
+        </li>
+		<li class="set-option">
+            <p class="set-title">文字阴影</p>
+            <div class="set-switch"></div>
+			<p class="set-description">主页书签文字阴影</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">恢复壁纸和LOGO</p>
+        </li>
+		<li class="set-option">
+            <p class="set-title">初始化</p>
+            <p class="set-description">将删除所有书签和设置项</p>
+        </li>
+		<li class="set-option">
+            <p class="set-title">备份</p>
+            <p class="set-description">未完成</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">还原</p>
+            <div class="set-upload"></div>
+            <p class="set-description">未完成</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">检查更新</p>
+            <p class="set-description">当前版本：1.1</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">码云下载</p>
+            <p class="set-description"><a class="set-description" href="https://gitee.com/xiaobaizzz/liulanqizhuye">https://gitee.com/xiaobaizzz/liulanqizhuye</a>
+			</p>
+        </li>
+        <li class="set-option">
+            <p class="set-title">关于</p>
+            <p class="set-description">原创：<a class="set-description" href="http://www.coolapk.com/u/854901">酷安@BigLop</a>丶优化：<a class="set-description" href="http://www.coolapk.com/u/696533">酷安@丨晓柏惜梦丨</a></p>
+        </li>
+    </ul>
+    <input type="file" id="set-upload">
+</div>
+<input class="s-temp">
+<div class="transition"></div>
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

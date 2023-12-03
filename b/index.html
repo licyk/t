@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>浏览器</title>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<link rel=stylesheet href=static/css/reset.main.css>
+<style>
+body, html {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+</style>
+</head>
+<body>
+<button class=prev>上一页</button>
+<button class=next>下一页</button>
+<button class=addTag data-url=https://www.baidu.com>百度</button>
+<button class=addTag data-url=https://licyk.github.io/>导航</button>
+<button class=reload>刷新</button>
+<div>
+  <div class=prev style="display:inline-block;height:30px;line-height:30px;width:35px;text-align: center;float:left;cursor:pointer">《</div>
+  <div class=Nav style="width:calc(100% - 115px);margin:auto;display:inline-block;float: left;"></div>
+  <div class=next style="display:inline-block;height:30px;line-height:30px;width: 35px;text-align:center;float: left;cursor:pointer">》</div>
+  <div class=reload style="display:inline-block;height:30px;line-height:30px;width: 35px;text-align:center;float: left;fongt-size:14px;cursor:pointer">刷新</div>
+  <div style="clear: both;"></div>
+</div>
+<div class=frameBox style="width:100%;height:calc(100% - 60px);"></div>
+<script>$(function() {
+            var tagView = new TagView({
+                cache: {
+                    table: "tableData"
+                },
+                el: ".Nav", //标签页承载的容器
+                frameEl: ".frameBox", // iframe 承载的容器
+                height: 30, // tagView的高度
+                // params: {
+                //     "arguments": "vanToptest",
+                //     "PRGNAME": "fanjiantao"
+                // }, //"url需要替换的参数"
+                tagList: [{
+                    path: "https://xiaobaizzz.gitee.io/liulanqizhuye/viaBrowser/",
+                    title: "首页",
+                    active: true, //是否选中
+                    isAffix: true, //是否固定
+                    preload: false //是否预加载自行实现预加载方式
+                }]
+            })
+            $(".next").on('click', function() {
+                tagView.next();
+            })
+            $(".prev").on('click', function() {
+                tagView.prev();
+            })
+            $(".addTag").click(function() {
+                tagView.addTagView($(this).text().trim(), $(this).data("url").trim())
+            })
+            $(".reload").click(function() {
+                tagView.refresh();
+            })
+        })</script><script src=js/vendors.47ac78a.js?47ac78a640ae9f373ab8></script><script src=js/app.47ac78a.js?47ac78a640ae9f373ab8></script>
+</body>
+</html>
