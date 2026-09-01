@@ -1,0 +1,13 @@
+{
+  "files": [
+    "danbooru_e621_merged.csv",
+    "danbooru.csv",
+    "derpibooru.csv",
+    "e621_sfw.csv",
+    "e621.csv",
+    "EnglishDictionary.csv",
+    "extra-quality-tags.csv",
+    "tag_pp_zh.csv",
+    "tag_pp.csv"
+  ]
+}

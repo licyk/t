@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirect non-hash paths to hash-based routes for SPA with Hash routing.
+      // e.g. https://licyk.github.io/t/sd_portable/ -> https://licyk.github.io/t/#/sd_portable/
+      // e.g. https://licyk.github.io/t/sd_portable?foo=bar -> https://licyk.github.io/t/#/sd_portable?foo=bar
+      (function () {
+        var l = window.location;
+        var pathname = l.pathname;
+
+        // If there's already a hash, don't redirect
+        if (l.hash) return;
+
+        // Find the base path by looking for the known deploy root.
+        // For GitHub project pages, the base is /<repo-name>/
+        // We detect it by finding the shortest prefix that matches the deploy path.
+        // Strategy: the base path is everything up to and including the first path segment.
+        var match = pathname.match(/^(\/[^/]+\/)/);
+        var basePath = match ? match[1] : '/';
+        var routePath = pathname.slice(basePath.length);
+
+        // Remove trailing slash for clean route, but keep root as /
+        if (routePath === '' || routePath === '/') {
+          // Already at root, just add hash
+          l.replace(l.protocol + '//' + l.host + basePath + '#/' + (l.search || ''));
+        } else {
+          // Convert path to hash route
+          l.replace(
+            l.protocol + '//' + l.host + basePath + '#/' + routePath +
+            (l.search || '')
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
